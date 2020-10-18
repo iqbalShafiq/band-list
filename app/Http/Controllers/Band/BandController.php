@@ -10,6 +10,13 @@ use App\Http\Controllers\Controller;
 
 class BandController extends Controller
 {
+    public function table()
+    {
+        return view('bands.table', [
+            'bands' => Band::latest()->paginate(16)
+        ]);
+    }
+
     public function create()
     {
         return view('bands.create', [
