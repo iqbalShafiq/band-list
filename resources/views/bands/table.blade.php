@@ -18,7 +18,7 @@
                 <td>{{ $band->name }}</td>
                 <td>{{ $band->genres()->get()->implode('name', ',') }}</td>
                 <td class="text-center">
-                    <a href="#" class="btn btn-primary mr-2">Update</a>
+                    <a href="{{ route('bands.edit', $band->slug) }}" class="btn btn-primary mr-2">Edit</a>
                     <a href="#" class="btn btn-danger mr-2">Delete</a>
                 </td>
             </tr>
